@@ -14,5 +14,10 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "@tiptap/core": "^2.0.0-beta.105",
+        "@tiptap/starter-kit": "^2.0.0-beta.104",
+        "alpinejs": "^2.8.2"
     }
 }
