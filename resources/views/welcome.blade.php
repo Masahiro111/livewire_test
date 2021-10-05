@@ -5,12 +5,16 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="{{ mix('css/app.css') }}" rel="stylesheet" />
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('css/gfm.css') }}">
+
         <title>TipTap Demo</title>
         @livewireStyles
     </head>
 
-    <body>
-        <h1>TipTap Livewire Demo</h1>
+    <body class="bg-gray-100 p-8">
+        <h1 class="text-gray-800 text-3xl font-semibold text-center">TipTap Livewire Demo</h1>
+
         <!-- The editor component -->
         <livewire:editor />
 
