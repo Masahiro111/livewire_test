@@ -13,7 +13,7 @@ window.setupEditor = function() {
                 ],
                 content: this.content,
                 onUpdate: ({ editor }) => {
-                    this.content = JSON.stringify(editor.getJSON());
+                    this.content = editor.getHTML()
                 }
             })
         },

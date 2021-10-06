@@ -8851,7 +8851,7 @@ window.setupEditor = function () {
         content: this.content,
         onUpdate: function onUpdate(_ref) {
           var editor = _ref.editor;
-          _this.content = JSON.stringify(editor.getJSON());
+          _this.content = editor.getHTML();
         }
       });
     }
