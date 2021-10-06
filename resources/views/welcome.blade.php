@@ -12,10 +12,16 @@
     <body>
         <h1>TipTap Livewire Demo</h1>
         <!-- The editor component -->
-        <livewire:editor />
+        <!-- <livewire:editor /> -->
+        <livewire:counter />
+
+        <hr>
+
+        <livewire:show-posts />
 
         @livewireScripts
-        <script src="{{mix('js/app.js')}}" defer></script>
+        <script src="{{mix('js/app.js')}}" defer>
+        </script>
     </body>
 
 </html>
