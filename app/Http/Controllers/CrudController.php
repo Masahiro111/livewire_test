@@ -47,8 +47,7 @@ class CrudController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect('/crud')
-            ->with('message', '登録が完了しました');;
+        return redirect('/crud');
     }
 
     /**
@@ -94,8 +93,7 @@ class CrudController extends Controller
             'content' => $request->content,
         ]);
 
-        return redirect('/crud')
-            ->with('message', '更新が完了しました');
+        return redirect('/crud');
     }
 
     /**
@@ -108,7 +106,6 @@ class CrudController extends Controller
     {
         Crud::find($id)->delete();
 
-        return redirect('/crud')
-            ->with('message', '削除が完了しました');
+        return redirect('/crud');
     }
 }
