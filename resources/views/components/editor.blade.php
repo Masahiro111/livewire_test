@@ -7,10 +7,10 @@
     <!-- The Controls -->
     <template x-if="editor">
         <div class="mb-2 flex gap-2">
-            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().toggleBold().focus().run()">Bold</button>
-            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleItalic().run()">italic</button>
+            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleBold().run()" :class="{ ' is-active bg-gray-400 ': editor.isActive('bold') }">Bold</button>
+            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleItalic().run()" :class="{ ' is-active bg-gray-400 ': editor.isActive('italic') }">italic</button>
             <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().setParagraph().run()"> paragraph</button>
-            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleHeading({ level: 1 }).run()">h1</button>
+            <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleHeading({ level: 1 }).run()" :class="{ ' is-active bg-gray-400 ': editor.isActive('heading', { level: 1 }) }">h1</button>
             <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleHeading({ level: 2 }).run()">h2</button>
             <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleHeading({ level: 3 }).run()">h3</button>
             <button class="flex items-center px-3 py-1 bg-gray-200 rounded-lg shadow-xs cursor-pointer hover:bg-gray-500 hover:text-gray-100" @click="editor.chain().focus().toggleHeading({ level: 4 }).run()">h4</button>
